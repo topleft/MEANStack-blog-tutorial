@@ -32,7 +32,7 @@ router.get('/form', function(req, res){
 // POST form
 router.post('/form', function(req, res) {
   // console.log(req.body.comment);
-  new Comment({title : req.body.comment})
+  new Comment({title : req.body.comment, blog : req.body.blog})
   .save(function(err, comment){
     console.log(comment);
     res.redirect('/');
@@ -49,7 +49,7 @@ router.post('/form', function(req, res) {
 router.get('/:id', function(req, res) {
   Comment.findById(req.params.id, function(err, comment){
     if (err) {console.log(err)}
-    res.send(comment.title)
+    res.send(comment.blog)
   });
 });
 
