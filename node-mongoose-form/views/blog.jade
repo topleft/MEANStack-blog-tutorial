@@ -1,5 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  p= comment.blog
+  div(class="blog-text")
+    h3= comment.title
+    p= comment.blog
+    div(class="social-links")
+      a(href='/#{http://github.com/topleft}') Git
+      a(href='/#{http://linkedin.com/in/topleft}') In
+      a(href='/#{http://twitter.com/topleftdev}') Twitter
