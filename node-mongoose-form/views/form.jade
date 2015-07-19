@@ -5,7 +5,7 @@ block content
   h1= title
   form(method="post", action="/form")
     label(for= "comment") Title:
-    input(type="text", name="comment", value=comment)
+    input(type="text", name="comment", value=comment, id="titleInput", class="input")
     label(for="post") Content:
-    input(type="text", name="blog", value=blog)
+    textarea(type="text", name="blog", value=blog, id="blogInput", class="input" )
     input(type="submit", value="Save")
