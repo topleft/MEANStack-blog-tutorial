@@ -1,9 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  br
-  - for comment in comments
-    p= comment.title
-    a(href='/#{ comment.id }') View Post
+  div(class="blog-text")
+    h3 Learn
+    h5 Welcome to the Blog
+    br
+    div(class="title-menu")
+      - for comment in comments
+        div(class="each-post")
+          h4= comment.title
+          a(href='/#{ comment.id }' class="post-link") View Post

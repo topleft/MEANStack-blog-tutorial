@@ -15,7 +15,7 @@ router.get('/', function(req, res){
     // console.log(comments);
     res.render(
       'index',
-      {title:"Express", comments : comments}
+      {title:"Learning Blog", comments : comments}
     );
   });
 });
@@ -24,7 +24,7 @@ router.get('/', function(req, res){
 router.get('/form', function(req, res){
     res.render(
       'form',
-      {title:"My funky form"}
+      {title:"What did you learn today?"}
     );
   });
 
