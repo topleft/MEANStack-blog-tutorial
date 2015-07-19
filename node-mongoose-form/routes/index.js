@@ -39,6 +39,8 @@ router.post('/form', function(req, res) {
   });
 });
 
+
+
 // this orutes to a page that uses "res.send()" to print out the comment title
 // the '/:id' will except anything because of the :
 // req = request res = response these variable names could be changed to anything, but these are convention
@@ -49,7 +51,11 @@ router.post('/form', function(req, res) {
 router.get('/:id', function(req, res) {
   Comment.findById(req.params.id, function(err, comment){
     if (err) {console.log(err)}
-    res.send(comment.blog)
+    // res.send(comment.blog)
+    res.render(
+      'blog',
+      {title : comment.comment, comment : comment}
+    )
   });
 });
 
